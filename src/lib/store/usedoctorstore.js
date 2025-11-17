@@ -16,12 +16,15 @@ adddoctor:async(data)=>{
             specialization,
             consultationFees,
             email,
-            password}=data
+         status,
+            role}=data
         let response =await axios.post("http://localhost:3000/api/adddoctor",{ name,
             specialization,
             consultationFees,
             email,
-            password})
+             status,
+            role
+            })
         set((state)=>({
             Doctors:[...state.Doctors, response.data]
         }))

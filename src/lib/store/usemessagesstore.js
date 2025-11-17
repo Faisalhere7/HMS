@@ -29,7 +29,7 @@ export const usemessagesstore = create((set) => ({
       set({ messages: response.data.getmessages, loading: false });
       console.log(response.data.getmessages); // Verify response structure
 
-  
+
     } catch (error) {
       console.error('Failed to fetch messages:', error);
       set({ loading: false });
